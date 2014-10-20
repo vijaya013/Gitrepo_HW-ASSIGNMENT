@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* General rules - scales images, videos to size of container */
+img, embed, object, video 
+{
+max-width: 100%;
+}
+
+/*Fix for scaling of images IE*/
+img 
+{ 
+-ms-interpolation-mode: bicubic; 
+}
+
+/*hides from browser, shows in doc outliner */
+.hidden	
+{
+display:none;
+}
+	
+
+/*---Body----*/
+
+body 
+{
+font-family: Helvetica, Arial, sans-serif;
+font-size: 100%; /*=16px or 1em*/
+color: #333;
+}
+
+
+/*------- Container ------*/
+
+#container {
+  margin: 10px auto;
+  width: 95%;
+  overflow:hidden; /*crop any content that may spill out of div*/
+  background-color: white;
+}
+
+.blackBox {
+	background-color: #000;	
+	height: 200px;
+}
+
+#socialMedia{
+	margin-top: 20px;	
+}
+
+
+
+#body {
+	clear: both;
+	padding-top: 80px;
+}
+
+.blackBoxBody {
+	background-color: #eee;	
+	height: 300px;
+}
+
+#bodyRight {
+	margin-top: 20px;	
+}
+
+
+
+footer {
+	clear: both;
+	padding-top: 80px;
+}
+
+.blackBoxFooter {
+	background-color: #ccc;	
+	height: 500px;
+}
+
+#footerRight {
+	margin-top: 20px;	
+}
+
+
+
+
+/*--------Media Queries---------*/
+
+
+/* if the browser window is larger than 1140px set container widths to 1140px */
+
+@media screen and (min-width: 1140px) {
+	#container {
+	width: 1140px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#navCon{
+		width: 77.80701754385965%; /*887 / 1140*/
+		float: left;
+	}
+	
+	#mainNav {
+		width: 95.152198421646%; /*844/887*/
+	}
+	
+	#socialMedia{
+		margin-top: 0px;
+		width: 22.19298245614035%; /*253 / 1140*/
+		float: right;
+	}
+	
+	#bodyLeft {
+		width: 65.35087719298246%; /*745 / 1140*/
+		float: left;
+	}
+	
+	#bodyRight {
+		margin-top: 0px;
+		width: 30.87719298245614%; /*352 / 1140*/
+		float: right;
+	}
+	
+	#footerLeft {
+		width: 82.63157894736842%; /*942 / 1140*/
+		float: left;
+	}
+	
+	#footerRight {
+		margin-top: 0px;
+		width: 13.50877192982456%; /*154 / 1140*/
+		float: right;
+	}
+}
